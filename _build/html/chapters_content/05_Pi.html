@@ -1,0 +1,825 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>05 π &#8212; 50 Mathematical Ideas You Really Need to Know</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters_content/05_Pi';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="06 e" href="06_e.html" />
+    <link rel="prev" title="04 Squares and square roots" href="04_Squares_and_square_roots.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="50 Mathematical Ideas You Really Need to Know - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="50 Mathematical Ideas You Really Need to Know - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introducción a 50 Ideas Matemáticas
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_Zero.html">01 Zero</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="02_Number_systems.html">02 Number systems</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="03_Fractions.html">03 Fractions</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="04_Squares_and_square_roots.html">04 Squares and square roots</a></li>
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">05 π</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="06_e.html">06 e</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="07_Infinity.html">07 Infinity</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="08_Imaginary_numbers.html">08 Imaginary numbers</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="09_Primes.html">09 Primes</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="10_Perfect_numbers.html">10 Perfect numbers</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="11_Fibonacci_numbers.html">11 Fibonacci numbers</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="12_Golden_rectangles.html">12 Golden rectangles</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="13_Pascals_triangle.html">13 Pascal’s triangle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_Algebra.html">14 Algebra</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="15_Euclids_algorithm.html">15 Euclid’s algorithm</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="16_Logic.html">16 Logic</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="17_Proof.html">17 Proof</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="18_Sets.html">18 Sets</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="19_Calculus.html">19 Calculus</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="20_Constructions.html">20 Constructions</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="21_Triangles.html">21 Triangles</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="22_Curves.html">22 Curves</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="23_Topology.html">23 Topology</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="24_Dimension.html">24 Dimension</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="25_Fractals.html">25 Fractals</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="26_Chaos.html">26 Chaos</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="27_The_parallel_postulate.html">27 The parallel postulate</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="28_Discrete_geometry.html">28 Discrete geometry</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="29_Graphs.html">29 Graphs</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="30_The_four-colour_problem.html">30 The four-colour problem</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="31_Probability.html">31 Probability</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="32_Bayess_theory.html">32 Bayes’s theory</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="33_The_birthday_problem.html">33 The birthday problem</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="34_Distributions.html">34 Distributions</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="35_The_normal_curve.html">35 The normal curve</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="36_Connecting_data.html">36 Connecting data</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="37_Genetics.html">37 Genetics</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="38_Groups.html">38 Groups</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="39_Matrices.html">39 Matrices</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="40_Codes.html">40 Codes</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="41_Advanced_counting.html">41 Advanced counting</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="42_Magic_squares.html">42 Magic squares</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="43_Latin_squares.html">43 Latin squares</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="44_Money_mathematics.html">44 Money mathematics</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="45_The_diet_problem.html">45 The diet problem</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="46_The_travelling_salesperson.html">46 The travelling salesperson</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="47_Game_theory.html">47 Game theory</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="48_Relativity.html">48 Relativity</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="49_Fermats_last_theorem.html">49 Fermat’s last theorem</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="50_The_Riemann_hypothesis.html">50 The Riemann hypothesis</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="51_Glossary.html">51 Glossary</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapters_content/05_Pi.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapters_content/05_Pi.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>05 π</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">05 π</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#archimedes-of-syracuse">Archimedes of Syracuse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-exact-value-of">The exact value of π</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-importance-of">The importance of π</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-condensed-idea">the condensed idea</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#when-the-was-opened">When the π was opened</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id1">
+<h1>05 π<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p><strong>π is the most famous number in mathematics. Forget all the other constants of nature, π
+will always come at the top of the list. If there were Oscars for numbers, π would get an
+award every year.</strong></p>
+<p>π or pi, is the length of the outside of a circle (the circumference) divided by
+the length across its centre (the diameter). Its value, the ratio of these two
+lengths, does not depend on the size of the circle. Whether the circle is big or
+small, π is indeed a mathematical constant. The circle is the natural habitat for π
+but it occurs everywhere in mathematics, and in places not remotely connected
+with the circle.
+<strong>For a circle of diameter d and radius r :</strong>
+circumference = πd = 2πr area = πr^2
+<strong>For a sphere of diameter d and radius r :</strong>
+surface area = πd^2 = 4 πr^2
+volume = 4/ 3 πr^3</p>
+<section id="archimedes-of-syracuse">
+<h2>Archimedes of Syracuse<a class="headerlink" href="#archimedes-of-syracuse" title="Link to this heading">#</a></h2>
+<p>The ratio of the circumference to the diameter of a circle was a subject of
+ancient interest. Around 2000 <strong>BC</strong> the Babylonians made the observation that the
+circumference was roughly 3 times as long as its diameter.
+It was Archimedes of Syracuse who made a real start on the mathematical
+theory of π in around 225 <strong>BC</strong>. Archimedes is right up there with the greats.
+Mathematicians love to rate their co-workers and they place him on a level with
+Carl Friedrich Gauss (The ‘Prince of Mathematicians’) and Sir Isaac Newton.
+Whatever the merits of this judgment it is clear that Archimedes would be in any
+mathematics Hall of Fame. He was hardly an ivory tower figure though – as well
+as his contributions to astronomy, mathematics and physics, he also designed
+weapons of war, such as catapults, levers and ‘burning mirrors’, all used to help
+keep the Romans at bay. But by all accounts he did have something of the
+absent-mindedness of the professor, for what else would induce him to leap from
+his bath and run naked down the street shouting ‘Eureka’ at discovering the law</p>
+<p>of buoyancy in hydrostatics? How he celebrated his work on π is not recorded.</p>
+<p>Given that π is defined as the ratio of its circumference to its diameter, what
+does it have to do with the area of a circle? It is a deduction that the area of a
+circle of radius r is πr^2 , though this is probably better known than the
+circumference/diameter definition of π. The fact that π does double duty for area
+and circumference is remarkable.</p>
+<p>How can this be shown? The circle can be split up into a number of narrow
+equal triangles with base length b whose height is approximately the radius r.
+These form a polygon inside the circle which approximates the area of the circle.
+Let’s take 1000 triangles for a start. The whole process is an exercise in
+approximations. We can join together each adjacent pair of these triangles to
+form a rectangle (approximately) with area b × r so that the total area of the
+polygon will be 500 × b × r. As 500 × b is about half the circumference it has
+length πr, the area of the polygon is πr × r = πr^2. The more triangles we take
+the closer will be the approximation and in the limit we conclude the area of the</p>
+<p>circle is. πr^2.
+Archimedes estimated the value of π as bounded between and. And
+so it is to Archimedes that we owe the familiar approximation 22/7 for the value
+of π. The honour for designating the actual symbol π goes to the little known
+William Jones, a Welsh mathematician who became Vice President of the Royal
+Society of London in the 18th century. It was the mathematician and physicist
+Leonhard Euler who popularized π in the context of the circle ratio.</p>
+</section>
+<section id="the-exact-value-of">
+<h2>The exact value of π<a class="headerlink" href="#the-exact-value-of" title="Link to this heading">#</a></h2>
+<p>We can never know the exact value of π because it is an irrational number, a
+fact proved by Johann Lambert in 1768. The decimal expansion is infinite with
+no predictable pattern. The first 20 decimal places are
+3.14159265358979323846…The value of √10 used by the Chinese
+mathematicians is 3. 1 <strong>6</strong> 227766016837933199 and this was adopted around <strong>AD</strong>
+500 by Brahmagupta. This value is in fact little better than than the crude value
+of 3 and it differs in the second decimal place from π.
+π can be computed from a series of numbers. A well known one is though this
+is painfully slow in its convergence on π and quite hopeless for calculation. Euler
+found a remarkable series that converges to π:</p>
+<p>The self-taught genius Srinivasa Ramanujan devised some spectacular
+approximating formulae for π. One involving only the square root of 2 is:</p>
+<p>Mathematicians are fascinated by π. While Lambert had proved it could not be
+a fraction, in 1882 the German mathematician Ferdinand von Lindemann solved
+the most outstanding problem associated with π. He showed that π is
+‘transcendental’; that is, π cannot be the solution of an algebraic equation (an
+equation which only involves powers of x). By solving this ‘riddle of the ages’</p>
+<p>Lindemann concluded the problem of ‘squaring the circle’. Given a circle the
+challenge was to construct a square of the same area using only a pair of
+compasses and a straight edge. Lindemann proved conclusively that it cannot be
+done. Nowadays the phrase squaring the circle is the equivalent of an
+impossibility.
+The actual calculation of π continued apace. In 1853, William Shanks claimed
+a value correct to 607 places (actually correct up to only 527). In modern times
+the quest for calculating π to more and more decimal places gained momentum
+through the modern computer. In 1949, π was calculated to 2037 decimal
+places, which took 70 hours to do on an ENIAC computer. By 2002, π had been
+computed to a staggering 1,241,100,000,000 places, but it is an ever growing
+tail. If we stood on the equator and started writing down the expansion of π,
+Shanks’ calculation would take us a full 14 metres, but the length of the 2002
+expansion would take us about 62 laps around the world!
+Various questions about π have been asked and aswered. Are the digits of π
+random? Is it possible to find a predetermined sequence in the expansion? For
+instance, is it possible to find the sequence 0123456789 in the expansion? In the
+1950s this seemed unknowable. No one had found such a sequence in the 2000
+known digits of π. L.E.J. Brouwer, a leading Dutch mathematician, said the
+question was devoid of meaning since he believed it could not be experienced. In
+fact these digits were found in 1997 beginning at the position 17,387,594,880,
+or, using the equator metaphor, about 3000 miles before one lap is completed.
+You will find ten sixes in a row before you have completed 600 miles but will
+have to wait until one lap has been completed and gone a further 3600 miles to
+find ten sevens in a row.</p>
+<p><strong>π</strong> in poetry
+If you really want to remember the first values in the expansion of π perhaps a little poetry will
+help. Following the tradition of teaching mathematics in the ‘mnemonic way’ there is a brilliant
+variation of Edgar Allen Poe’s poem ‘The Raven’ by Michael Keith.</p>
+<p><strong>The letter count of each successive word in Keith’s version provides the first 740
+digits of π</strong>.</p>
+</section>
+</section>
+<section id="the-importance-of">
+<h1>The importance of π<a class="headerlink" href="#the-importance-of" title="Link to this heading">#</a></h1>
+<p>What is the use of knowing π to so many places? After all, most calculations
+only require a few decimal places; probably no more than ten places are needed
+for any practical application, and Archimedes’ approximation of 22/7 is good
+enough for most. But the extensive calculations are not just for fun. They are
+used to test the limits of computers, besides exerting a fascination on the group
+of mathematicians who have called themselves the ‘friends of pi’.
+Perhaps the strangest episode in the story of π was the attempt in the Indiana
+State Legislature to pass a bill that would fix its value. This occurred at the end of
+the 19th century when a medical doctor Dr E.J. Goodwin introduced the bill to
+make π ‘digestible’. A practical problem encountered in this piece of legislation
+was the proposer’s inability to fix the value he wanted. Happily for Indiana, the
+folly of legislating on π was realized before the bill was fully</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="the-condensed-idea">
+<h1>the condensed idea<a class="headerlink" href="#the-condensed-idea" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="when-the-was-opened">
+<h1>When the π was opened<a class="headerlink" href="#when-the-was-opened" title="Link to this heading">#</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python demo: Calculate Pi using the Leibniz formula</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_pi_leibniz</span><span class="p">(</span><span class="n">iterations</span><span class="p">):</span>
+    <span class="n">pi_estimate</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">iterations</span><span class="p">):</span>
+        <span class="n">term</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">pi_estimate</span> <span class="o">+=</span> <span class="n">term</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">pi_estimate</span> <span class="o">-=</span> <span class="n">term</span>
+    <span class="k">return</span> <span class="n">pi_estimate</span> <span class="o">*</span> <span class="mi">4</span>
+
+<span class="c1"># You can change the number of iterations to see how the accuracy changes</span>
+<span class="n">num_iterations</span> <span class="o">=</span> <span class="mi">100000</span>
+<span class="n">pi_approx</span> <span class="o">=</span> <span class="n">calculate_pi_leibniz</span><span class="p">(</span><span class="n">num_iterations</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Approximation of Pi after </span><span class="si">{</span><span class="n">num_iterations</span><span class="si">}</span><span class="s2"> iterations: </span><span class="si">{</span><span class="n">pi_approx</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Difference from math.pi: </span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">pi_approx</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">3.1415926535</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters_content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="04_Squares_and_square_roots.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">04 Squares and square roots</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="06_e.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">06 e</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">05 π</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#archimedes-of-syracuse">Archimedes of Syracuse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-exact-value-of">The exact value of π</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-importance-of">The importance of π</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-condensed-idea">the condensed idea</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#when-the-was-opened">When the π was opened</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Tony Crilly (Adapted by Gemini)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

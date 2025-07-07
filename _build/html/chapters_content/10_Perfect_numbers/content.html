@@ -1,0 +1,670 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>10 Perfect numbers &#8212; 50 Mathematical Ideas You Really Need to Know</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters_content/10_Perfect_numbers/content';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="50 Mathematical Ideas You Really Need to Know - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="50 Mathematical Ideas You Really Need to Know - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapters_content/10_Perfect_numbers/content.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters_content/10_Perfect_numbers/content.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>10 Perfect numbers</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">10 Perfect numbers</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mersenne-numbers">Mersenne numbers</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#construction-work">Construction work</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#odd-perfect-numbers">Odd perfect numbers</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-condensed-idea">the condensed idea</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-mystique-of-numbers">The mystique of numbers</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="perfect-numbers">
+<h1>10 Perfect numbers<a class="headerlink" href="#perfect-numbers" title="Link to this heading">#</a></h1>
+<p><strong>In mathematics the pursuit of perfection has led its aspirants to different places. There
+are perfect squares, but here the term is not used in an aesthetic sense. It’s more to
+warn you that there are imperfect squares in existence. In another direction, some
+numbers have few divisors and some have many. But, like the story of the three bears,
+some numbers are ‘just right’. When the addition of the divisors of a number equals the
+number itself it is said to be perfect.</strong></p>
+<p>The Greek philosopher Speusippus, who took over the running of the
+Academy from his uncle Plato, declared that the Pythagoreans believed that 10
+had the right credentials for perfection. Why? Because the number of prime
+numbers between 1 and 10 (namely 2, 3, 5, 7) equalled the non-primes (4, 6, 8,
+9) and this was the smallest number with this property. Some people have a
+strange idea of perfection.
+It seems the Pythagoreans actually had a richer concept of a perfect number.
+The mathematical properties of perfect numbers were delineated by Euclid in the
+Elements and studied in depth by Nicomachus 400 years later, leading to
+amicable numbers and even sociable numbers. These categories were defined in
+terms of the relationships between them and their divisors. At some point they
+came up with the theory of superabundant and deficient numbers and this led
+them to their concept of perfection.
+Whether a number is superabundant is determined by its divisors and makes a
+play on the connection between multiplication and addition. Take the number 30
+and consider its divisors, that is all the numbers which divide into it exactly and
+which are less than 30. For such a small number as 30 we can see the divisors
+are 1, 2, 3, 5, 6, 10 and 15. Totalling up these divisors we get 42. The number
+30 is superabundant because the addition of its divisors (42) is bigger than the
+number 30 itself.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The first few perfect numbers
+A number is deficient if the opposite is true – if the sum of its divisors is less
+</pre></div>
+</div>
+<p>than itself. So the number 26 is deficient because its divisors 1, 2 and 13 add up
+to only 16, which is less than 26. Prime numbers are very deficient because the
+sum of their divisors is always just 1.
+A number that is neither superabundant nor deficient is perfect. The addition
+of the divisors of a perfect number equal the number itself. The first perfect
+number is 6. Its divisors are 1, 2, 3 and when we add them up, we get 6. The
+Pythagoreans were so enchanted with the number 6 and the way its parts fitted
+together that they called it ‘marriage, health and beauty’. There is another story
+connected with 6 told by St Augustine (354–430). He believed that the perfection
+of 6 existed before the world came into existence and that the world was created
+in 6 days because the number was perfect.</p>
+<p>The next perfect number is 28. Its divisors are 1, 2, 4, 7 and 14 and, when we
+add them up, we get 28. These first two perfect numbers, 6 and 28, are rather
+special in perfect number lore for it can be proved that every even perfect
+number ends in a 6 or a 28. After 28, you have wait until 496 for the next</p>
+<p>perfect number. It is easy to check it really is the sum of its divisors: 496 = 1 +
+2 + 4 + 8 + 16 + 31 + 62 + 124 +248. For the next perfect numbers we have
+to start going into the numerical stratosphere. The first five were known in the
+16th century, but we still don’t know if there is a largest one, or whether they go
+marching on without limit. The balance of opinion suggests that they, like the
+primes, go on for ever.
+The Pythagoreans were keen on geometrical connections. If we have a perfect
+number of beads, they can be arranged around a hexagonal necklace. In the case
+of 6 this is the simple hexagon with beads placed at its corners, but for higher
+perfect numbers we have to add in smaller subnecklaces within the large one.</p>
+<section id="mersenne-numbers">
+<h2>Mersenne numbers<a class="headerlink" href="#mersenne-numbers" title="Link to this heading">#</a></h2>
+<p>The key to constructing perfect numbers is a collection of numbers named
+after Father Marin Mersenne, a French monk who studied at a Jesuit college with
+René Descartes. Both men were interested in finding perfect numbers. Mersenne
+numbers are constructed from powers of 2, the doubling numbers 2, 4, 8, 16,
+32, 64, 128, 256,.. ., and then subtracting a single 1. A Mersenne number is a
+number of the form 2 <strong>n</strong> − 1. While they are always odd, they are not always</p>
+<p>prime. But it is those Mersenne numbers that are also prime that can be used to
+construct perfect numbers.
+Mersenne knew that if the power was not a prime number, then the Mersenne
+number could not be a prime number either, accounting for the non-prime
+powers 4, 6, 8, 9, 10, 12, 14 and 15 in the table. The Mersenne numbers could
+only be prime if the power was a prime number, but was that enough? For the
+first few cases, we do get 3, 7, 31 and 127, all of which are prime. So is it
+generally true that a Mersenne number formed with a prime power should be
+prime as well?
+Many mathematicians of the ancient world up to about the year 1500 thought
+this was the case. But primes are not constrained by simplicity, and it was found
+that for the power 11 (a prime number), 2^11 – 1 = 2047 = 23 × 89 and
+consequently it is not a prime number. There seems to be no rule. The Mersenne
+numbers 2^17 – 1 and 2^19 – 1 are both primes, but 2^23 – 1 is not a prime, because</p>
+<p><strong>Just good friends</strong>
+The hard-headed mathematician is not usually given to the mystique of
+numbers but numerology is not yet dead. The amicable numbers came after the
+perfect numbers though they may have been known to the Pythagoreans. Later
+they became useful in compiling romantic horoscopes where their mathematical
+properties translated themselves into the nature of the ethereal bond. The two
+numbers 220 and 284 are amicable numbers. Why so? Well, the divisors of 220
+are 1, 2, 4, 5, 10, 11, 20, 22, 44, 55 and 110 and if you add them up you get</p>
+<ol class="arabic simple" start="284">
+<li><p>You’ve guessed it. If you figure out the divisors of 284 and add them up,
+you get 220. That’s true friendship.</p></li>
+</ol>
+<p>Mersenne Primes
+Finding Mersenne primes is not easy. Many mathematicians over the centuries have added to the
+list, which has a chequered history built on a combination of error and correctness. The great
+Leonhard Euler contributed the eighth Mersenne prime, 2^31 – 1 = 2,147,483,647, in 1732. Finding
+the 23rd Mersenne prime, 2^11213 – 1, in 1963 was a source of pride for the mathematics department
+at the University of Illinois, who announced it to the world on their university postage stamp. But with
+powerful computers the Mersenne prime industry had moved on and in the late 1970s high school
+students Laura Nickel and Landon Noll jointly discovered the 25th Mersenne prime, and Noll the 26th
+Mersenne prime. To date 45 Mersenne primes have been discovered.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>223 – 1 = 8,388,607 = 47 × 178,481
+</pre></div>
+</div>
+</section>
+</section>
+<section id="construction-work">
+<h1>Construction work<a class="headerlink" href="#construction-work" title="Link to this heading">#</a></h1>
+<p>A combination of Euclid and Euler’s work provides a formula which enables
+even perfect numbers to be generated: n is an even perfect number if and only if
+n = 2p – 1(2p – 1) where 2p – 1 is a Mersenne prime.
+For example, 6 = 2^1 (2^2 – 1), 28 = 2^2 (2^3 – 1) and 496 = 2^4 (2^5 – 1). This
+formula for calculating even perfect numbers means we can generate them if we
+can find Mersenne primes. The perfect numbers have challenged both people and
+machines and will continue to do so in a way which earlier practitioners had not
+envisaged. Writing at the beginning of the 19th century, the table maker Peter
+Barlow thought that no one would go beyond the calculation of Euler’s perfect
+number
+230 (2^31 – 1) = 2,305,843,008,139,952,128
+as there was little point. He could not foresee the power of modern computers
+or mathematicians’ insatiable need to meet new challenges.</p>
+</section>
+<section id="odd-perfect-numbers">
+<h1>Odd perfect numbers<a class="headerlink" href="#odd-perfect-numbers" title="Link to this heading">#</a></h1>
+<p>No one knows if an odd perfect number will ever be found. Descartes did not
+think so but experts can be wrong. The English mathematician James Joseph
+Sylvester declared the existence of an odd perfect number ‘would be little short of
+a miracle’ because it would have to satisfy so many conditions. It’s little surprise
+Sylvester was dubious. It is one of the oldest problems in mathematics, but if an
+odd perfect number does exist quite a lot is already known about it. It would
+need to have at least 8 distinct prime divisors, one of which is greater than a
+million, while it would have to be at least 300 digits long.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="the-condensed-idea">
+<h1>the condensed idea<a class="headerlink" href="#the-condensed-idea" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="the-mystique-of-numbers">
+<h1>The mystique of numbers<a class="headerlink" href="#the-mystique-of-numbers" title="Link to this heading">#</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python demo: Find perfect numbers</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_divisors</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">divs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">divs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">*</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">n</span><span class="p">:</span>
+                <span class="n">divs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span> <span class="o">//</span> <span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">divs</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">is_perfect_number</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">get_divisors</span><span class="p">(</span><span class="n">n</span><span class="p">))</span> <span class="o">==</span> <span class="n">n</span>
+
+<span class="c1"># Find perfect numbers up to a certain limit</span>
+<span class="n">limit</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">perfect_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">limit</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">is_perfect_number</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Perfect numbers up to </span><span class="si">{</span><span class="n">limit</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">perfect_numbers</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Check a specific number</span>
+<span class="n">num_to_check</span> <span class="o">=</span> <span class="mi">28</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Is </span><span class="si">{</span><span class="n">num_to_check</span><span class="si">}</span><span class="s2"> a perfect number? </span><span class="si">{</span><span class="n">is_perfect_number</span><span class="p">(</span><span class="n">num_to_check</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters_content\10_Perfect_numbers"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">10 Perfect numbers</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mersenne-numbers">Mersenne numbers</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#construction-work">Construction work</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#odd-perfect-numbers">Odd perfect numbers</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-condensed-idea">the condensed idea</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-mystique-of-numbers">The mystique of numbers</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Tony Crilly (Adapted by Gemini)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

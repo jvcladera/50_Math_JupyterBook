@@ -1,0 +1,843 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>03 Fractions &#8212; 50 Mathematical Ideas You Really Need to Know</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters_content/03_Fractions';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="04 Squares and square roots" href="04_Squares_and_square_roots.html" />
+    <link rel="prev" title="02 Number systems" href="02_Number_systems.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="50 Mathematical Ideas You Really Need to Know - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="50 Mathematical Ideas You Really Need to Know - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introducción a 50 Ideas Matemáticas
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_Zero.html">01 Zero</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="02_Number_systems.html">02 Number systems</a></li>
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">03 Fractions</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="04_Squares_and_square_roots.html">04 Squares and square roots</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="05_Pi.html">05 π</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="06_e.html">06 e</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="07_Infinity.html">07 Infinity</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="08_Imaginary_numbers.html">08 Imaginary numbers</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="09_Primes.html">09 Primes</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="10_Perfect_numbers.html">10 Perfect numbers</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="11_Fibonacci_numbers.html">11 Fibonacci numbers</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="12_Golden_rectangles.html">12 Golden rectangles</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="13_Pascals_triangle.html">13 Pascal’s triangle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_Algebra.html">14 Algebra</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="15_Euclids_algorithm.html">15 Euclid’s algorithm</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="16_Logic.html">16 Logic</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="17_Proof.html">17 Proof</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="18_Sets.html">18 Sets</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="19_Calculus.html">19 Calculus</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="20_Constructions.html">20 Constructions</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="21_Triangles.html">21 Triangles</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="22_Curves.html">22 Curves</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="23_Topology.html">23 Topology</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="24_Dimension.html">24 Dimension</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="25_Fractals.html">25 Fractals</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="26_Chaos.html">26 Chaos</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="27_The_parallel_postulate.html">27 The parallel postulate</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="28_Discrete_geometry.html">28 Discrete geometry</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="29_Graphs.html">29 Graphs</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="30_The_four-colour_problem.html">30 The four-colour problem</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="31_Probability.html">31 Probability</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="32_Bayess_theory.html">32 Bayes’s theory</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="33_The_birthday_problem.html">33 The birthday problem</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="34_Distributions.html">34 Distributions</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="35_The_normal_curve.html">35 The normal curve</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="36_Connecting_data.html">36 Connecting data</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="37_Genetics.html">37 Genetics</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="38_Groups.html">38 Groups</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="39_Matrices.html">39 Matrices</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="40_Codes.html">40 Codes</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="41_Advanced_counting.html">41 Advanced counting</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="42_Magic_squares.html">42 Magic squares</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="43_Latin_squares.html">43 Latin squares</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="44_Money_mathematics.html">44 Money mathematics</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="45_The_diet_problem.html">45 The diet problem</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="46_The_travelling_salesperson.html">46 The travelling salesperson</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="47_Game_theory.html">47 Game theory</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="48_Relativity.html">48 Relativity</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="49_Fermats_last_theorem.html">49 Fermat’s last theorem</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="50_The_Riemann_hypothesis.html">50 The Riemann hypothesis</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="51_Glossary.html">51 Glossary</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapters_content/03_Fractions.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapters_content/03_Fractions.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>03 Fractions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">03 Fractions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-and-multiplying">Adding and multiplying</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-to-decimals">Converting to decimals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#egyptian-fractions">Egyptian fractions</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-condensed-idea">the condensed idea</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#one-number-over-another">One number over another</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="fractions">
+<h1>03 Fractions<a class="headerlink" href="#fractions" title="Link to this heading">#</a></h1>
+<p><strong>A fraction is a ‘fractured number’ – literally. If we break up a whole number an
+appropriate way to do it is to use fractions. Let’s take the traditional example, the
+celebrated cake, and break it into three parts.</strong></p>
+<p>The person who gets two of the three parts of the cake gets a fraction
+equivalent to ⅔. The unlucky person only gets ⅓. Putting together the two
+portions of the cake we get the whole cake back, or in fractions, ⅓ + ⅔ = 1
+where 1 represents the whole cake.
+Here is another example. You might have been to the sales and seen a shirt
+advertised at four-fifths of the original price. Here the fraction is written as ⅘. We
+could also say the shirt has a fifth off the original price. That would be written as
+⅕ and we see that ⅕ + ⅘ = 1 where 1 represents the original price.
+A fraction always has the form of a whole number ‘over’ a whole number. The
+bottom number is called the ‘denominator’ because it tells us how many parts
+make the whole. The top number is called the ‘numerator’ because it tells us how
+many unit fractions there are. So a fraction in established notation always looks</p>
+<p>In the case of the cake, the fraction you might want to eat is ⅔ where the
+denominator is 3 and the numerator is 2. ⅔ is made up of 2 unit fractions of ⅓.
+We can also have fractions like 14/5 (called improper fractions) where the</p>
+<p>numerator is bigger than the denominator. Dividing 14 by 5 we get 2 with 4 left
+over, which can be written as the ‘mixed’ number 2⅘. This comprises the whole
+number 2 and the ‘proper’ fraction ⅘. Some early writers wrote this as ⅘2.
+Fractions are usually represented in a form where the numerator and
+denominator (the ‘top’ and the ‘bottom’) have no common factors. For example,
+the numerator and denominator of 8/10 have a common factor of 2, because 8 =
+2 × 4 and 10 = 2 × 5. If we write the fraction 8/10 = 2×4/2×5 we can ‘cancel’ the</p>
+<p>2s out and so 8/10 = ⅘, a simpler form with the same value. Mathematicians
+refer to fractions as ‘rational numbers’ because they are ratios of two numbers.
+The rational numbers were the numbers the Greeks could ‘measure’.</p>
+<section id="adding-and-multiplying">
+<h2>Adding and multiplying<a class="headerlink" href="#adding-and-multiplying" title="Link to this heading">#</a></h2>
+<p>The rather curious thing about fractions is that they are easier to multiply than
+to add. Multiplication of whole numbers is so troublesome that ingenious ways
+had to be invented to do it. But with fractions, it’s addition that’s more difficult
+and takes some thinking about.
+Let’s start by multiplying fractions. If you buy a shirt at four-fifths of the
+original price of £30 you end up paying the sale price of £24. The £30 is divided
+into five parts of £6 each and four of these five parts is 4 × 6 = 24, the amount
+you pay for the shirt.
+Subsequently, the manager of the shop discovers that the shirts are not selling
+at all well so he drops the price still further, advertising them at ½ of the sale
+price. If you go into the shop you can now get the shirt for £12. This is ½ × ⅘
+× 30 which is equal to 12. To multiply two fractions together you just multiply
+the denominators together and the numerators together:</p>
+<p>If the manager had made the two reductions at a single stroke he would have
+advertised the shirts at four-tenths of the original price of £30. This is 4/10 × 30
+which is £12.
+Adding two fractions is a different proposition. The addition ⅓ + ⅔ is OK
+because the denominators are the same. We simply add the two numerators
+together to get 3/3, or 1. But how could we add two-thirds of a cake to fourfifths
+of a cake? How could we figure out ⅔ + ⅘? If only we could say ⅔ + ⅘ = 2+4/3+</p>
+<p>= 6/8 but unfortunately we cannot.
+Adding fractions requires a different approach. To add ⅔ and ⅘ we must first
+express each of them as fractions which have the same denominators. First
+multiply the top and bottom of ⅔ by 5 to get 10/15. Now multiply the top and
+bottom of ⅘ by 3 to get 12/15. Now both fractions have 15 as a common
+denominator and to add them we just add the new numerators together:</p>
+</section>
+<section id="converting-to-decimals">
+<h2>Converting to decimals<a class="headerlink" href="#converting-to-decimals" title="Link to this heading">#</a></h2>
+<p>In the world of science and most applications of mathematics, decimals are
+the preferred way of expressing fractions. The fraction ⅘ is the same as the
+fraction 8/10 which has 10 as a denominator and we can write this as the
+decimal 0.8.
+Fractions which have 5 or 10 as a denominator are easy to convert. But how
+could we convert, say ⅞, into decimal form? All we need to know is that when
+we divide a whole number by another, either it goes in exactly or it goes in a
+certain number of times with something left over, which we call the ‘remainder’.
+Using ⅞ as our example, the recipe to convert from fractions to decimals goes
+like this:</p>
+<ul class="simple">
+<li><p>Try to divide 8 into 7. It doesn’t go, or you could say it goes 0 times with
+remainder 7. We record this by writing zero followed by the decimal point: ‘0.’</p></li>
+<li><p>Now divide 8 into 70 (the remainder of the previous step multiplied by 10). This
+goes 8 times, since 8 × 8 = 64, so the answer is 8 with remainder 6 (70 − 64).
+So we write this alongside our first step, to make ‘0.8’</p></li>
+<li><p>Now divide 8 into 60 (the remainder of the previous step multiplied by 10).
+Because 7 × 8 = 56, the answer is 7 with remainder 4. We write this down, and
+so far we have ‘0.87’</p></li>
+<li><p>Divide 8 into 40 (the remainder of the previous step multiplied by 10). The
+answer is exactly 5 with remainder zero. When we get remainder 0 the recipe is
+complete. We are finished. The final answer is ‘0.875’.</p></li>
+</ul>
+<p>When applying this conversion recipe to other fractions it is possible that we
+might never finish! We could keep going forever; if we try to convert ⅔ into
+decimal, for instance, we find that at each stage the result of dividing 20 by 3 is 6
+with a remainder of 2. So we have again to divide 6 into 20, and we never get to
+the point where the remainder is 0. In this case we have the infinite decimal
+0.666666… This is written 0.6 to indicate the ‘recurring decimal’.
+There are many fractions that lead us on forever like this. The fraction 5/7 is
+interesting. In this case we get 5/7=0.714285714285714285… and we see that
+the sequence 714285 keeps repeating itself. If any fraction results in a repeating
+sequence we cannot ever write it down in a terminating decimal and the ‘dotty’</p>
+<p>notation comes into its own. In the case of 5/7 we write 5/7 =.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Egyptian</span> <span class="n">fractions</span>
+</pre></div>
+</div>
+</section>
+<section id="egyptian-fractions">
+<h2>Egyptian fractions<a class="headerlink" href="#egyptian-fractions" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">Egyptians</span> <span class="n">of</span> <span class="n">the</span> <span class="n">second</span> <span class="n">millennium</span> <span class="n">BC</span> <span class="n">based</span> <span class="n">their</span> <span class="n">system</span> <span class="n">of</span> <span class="n">fractions</span> <span class="n">on</span>
+</pre></div>
+</div>
+<p>hieroglyphs designating unit fractions – those fractions whose numerators are 1.
+We know this from the Rhind Papyrus which is kept in the British Museum. It was
+such a complicated system of fractions that only those trained in its use could
+know its inner secrets and make the correct calculations.
+The Egyptians used a few privileged fractions such as ⅔ but all other fractions
+were expressed in terms of unit fractions like ½, ⅓, ⅟ 11 or 1/168. These were</p>
+<p>their ‘basic fractions’ from which all other fractions could be expressed. For
+example 5/7 is not a unit fraction but it could be written in terms of the unit
+fractions,</p>
+<p>where different unit fractions must be used. A feature of the system is that
+there may be more than one way of writing a fraction, and some ways are
+shorter than others. For example,</p>
+<p>The ‘Egyptian expansion’ may have had limited practical use but the system
+has inspired generations of pure mathematicians and provided many challenging
+problems, some of which remain unsolved today. For instance, a full analysis of
+the methods for finding the shortest Egyptian expansion awaits the intrepid
+mathematical explorer.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="the-condensed-idea">
+<h1>the condensed idea<a class="headerlink" href="#the-condensed-idea" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="one-number-over-another">
+<h1>One number over another<a class="headerlink" href="#one-number-over-another" title="Link to this heading">#</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python demo: Fraction Arithmetic and Decimal Conversion</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">fractions</span><span class="w"> </span><span class="kn">import</span> <span class="n">Fraction</span>
+
+<span class="c1"># Addition of fractions</span>
+<span class="n">f1</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="c1"># 1/3</span>
+<span class="n">f2</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="c1"># 2/3</span>
+<span class="n">sum_f</span> <span class="o">=</span> <span class="n">f1</span> <span class="o">+</span> <span class="n">f2</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sum of </span><span class="si">{</span><span class="n">f1</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">f2</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">sum_f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">f3</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="c1"># 2/3</span>
+<span class="n">f4</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="c1"># 4/5</span>
+<span class="n">sum_f2</span> <span class="o">=</span> <span class="n">f3</span> <span class="o">+</span> <span class="n">f4</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sum of </span><span class="si">{</span><span class="n">f3</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">f4</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">sum_f2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Multiplication of fractions</span>
+<span class="n">mul_f</span> <span class="o">=</span> <span class="n">f3</span> <span class="o">*</span> <span class="n">f4</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Product of </span><span class="si">{</span><span class="n">f3</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">f4</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">mul_f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Conversion to decimal</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Decimal representation of </span><span class="si">{</span><span class="n">f3</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="nb">float</span><span class="p">(</span><span class="n">f3</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Decimal representation of </span><span class="si">{</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="nb">float</span><span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">))</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Decimal representation of </span><span class="si">{</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s2"> (recurring): </span><span class="si">{</span><span class="nb">float</span><span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">))</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Conceptual representation of Egyptian Fractions</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Egyptian Fractions (Conceptual) ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Egyptian fractions are sums of distinct unit fractions (e.g., 1/2 + 1/3 + 1/5).&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;For example, 5/7 can be represented as 1/2 + 1/3 + 1/42.&quot;</span><span class="p">)</span>
+
+<span class="c1"># Note: The fractions module handles common denominators automatically for arithmetic.</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters_content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="02_Number_systems.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">02 Number systems</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="04_Squares_and_square_roots.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">04 Squares and square roots</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">03 Fractions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-and-multiplying">Adding and multiplying</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-to-decimals">Converting to decimals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#egyptian-fractions">Egyptian fractions</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-condensed-idea">the condensed idea</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#one-number-over-another">One number over another</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Tony Crilly (Adapted by Gemini)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

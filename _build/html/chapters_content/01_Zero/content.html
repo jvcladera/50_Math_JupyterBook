@@ -1,0 +1,689 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>01 Zero &#8212; 50 Mathematical Ideas You Really Need to Know</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters_content/01_Zero/content';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="50 Mathematical Ideas You Really Need to Know - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="50 Mathematical Ideas You Really Need to Know - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapters_content/01_Zero/content.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters_content/01_Zero/content.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>01 Zero</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">01 Zero</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-did-zero-become-accepted">How did zero become accepted?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-does-zero-work">How does zero work?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-use-is-zero">What use is zero?</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-condensed-idea">the condensed idea</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#nothing-is-quite-something">Nothing is quite something</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="zero">
+<h1>01 Zero<a class="headerlink" href="#zero" title="Link to this heading">#</a></h1>
+<p><strong>At a young age we make an unsteady entrance into numberland. We learn that 1 is first
+in the ‘number alphabet’, and that it introduces the counting numbers 1, 2, 3, 4, 5,…
+Counting numbers are just that: they count real things – apples, oranges, bananas,
+pears. It is only later that we can count the number of apples in a box when there are
+none.</strong></p>
+<p>Even the early Greeks, who advanced science and mathematics by quantum
+leaps, and the Romans, renowned for their feats of engineering, lacked an
+effective way of dealing with the number of apples in an empty box. They failed
+to give ‘nothing’ a name. The Romans had their ways of combining I, V, X, L, C,
+D and M but where was 0? They did not count ‘nothing’.</p>
+<section id="how-did-zero-become-accepted">
+<h2>How did zero become accepted?<a class="headerlink" href="#how-did-zero-become-accepted" title="Link to this heading">#</a></h2>
+<p>The use of a symbol designating ‘nothingness’ is thought to have originated
+thousands of years ago. The Maya civilization in what is now Mexico used zero in
+various forms. A little later, the astronomer Claudius Ptolemy, influenced by the
+Babylonians, used a symbol akin to our modern 0 as a placeholder in his number
+system. As a placeholder, zero could be used to distinguish between examples
+(in modern notation) such as 75 and 705, instead of relying on context as the
+Babylonians had done. This might be compared with the introduction of the
+‘comma’ into language – both help with reading the right meaning. But, just as
+the comma comes with a set of rules for its use – there have to be rules for using
+zero.
+The seventh-century Indian mathematician Brahmagupta treated zero as a
+‘number’, not merely as a placeholder, and set out rules for dealing with it. These
+included ‘the sum of a positive number and zero is positive’ and ‘the sum of zero
+and zero is zero’. In thinking of zero as a number rather than a placeholder, he
+was quite advanced. The Hindu-Arabic numbering system which included zero in
+this way was promulgated in the West by Leonardo of Pisa – Fibonacci – in his
+Liber Abaci (The Book of Counting) first published in 1202. Brought up in North
+Africa and schooled in the Hindu-Arabian arithmetic, he recognized the power of</p>
+<p>using the extra sign 0 combined with the Hindu symbols 1, 2, 3, 4, 5, 6, 7, 8 and
+9.
+The launch of zero into the number system posed a problem which
+Brahmagupta had briefly addressed: how was this ‘interloper’ to be treated? He
+had made a start but his nostrums were vague. How could zero be integrated
+into the existing system of arithmetic in a more precise way? Some adjustments
+were straightforward. When it came to addition and multiplication, 0 fitted in
+neatly, but the operations of subtraction and division did not sit easily with the
+‘foreigner’. Meanings were needed to ensure that 0 harmonized with the rest of
+accepted arithmetic.</p>
+</section>
+<section id="how-does-zero-work">
+<h2>How does zero work?<a class="headerlink" href="#how-does-zero-work" title="Link to this heading">#</a></h2>
+<p>Adding and multiplying with zero is straightforward and uncontentious – you
+can add 0 to 10 to get a hundred – but we shall amean ‘add’ in the less
+imaginative way of the numerical operation. Adding 0 to a number leaves that
+number unchanged while multiplying 0 by any number always gives 0 as the
+answer. For example, we have 7 + 0 = 7 and 7 × 0 = 0. Subtraction is a simple
+operation but can lead to negatives, 7  0 = 7 and 0  7 =  7, while division
+involving zero raises difficulties.
+Let’s imagine a length to be measured with a measuring rod. Suppose the
+measuring rod is actually 7 units in length. We are interested in how many
+measuring rods we can lie along our given length. If the length to be measured
+is actually 28 units the answer is 28 divided by 7 or in symbols 2 8 ÷ 7 = 4. A
+better notation to express this division is</p>
+<p>and then we can ‘cross-multiply’ to write this in terms of multiplication, as 2 8
+= 7 × 4. What now can be made of 0 divided by 7? To help suggest an answer
+in this case let us call the answer a so that</p>
+<p>By cross-multiplication this is equivalent to 0 = 7 × a. If this is the case, the
+only possible value for a is 0 itself because if the multiplication of two numbers</p>
+<p>gives 0, one of them must be 0. Clearly it is not 7 so a must be a zero.
+This is not the main difficulty with zero. The danger point is division by 0. If
+we attempt to treat 7/0 in the same way as we did with 0/7, we would have the
+equation</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>By cross-multiplication, 0 × b = 7 and we wind up with the nonsense that 0 =
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>By admitting the possibility of 7/0 being a number we have the potential for
+numerical mayhem on a grand scale. The way out of this is to say that 7/0 is
+undefined. It is not permissible to get any sense from the operation of dividing 7
+(or any other nonzero number) by 0 and so we simply do not allow this
+operation to take place. In a similar way it is not permissible to place a comma in
+the mid,dle of a word without descending into nonsense.
+The 12th-century Indian mathematician Bhaskara, following in the footsteps of
+Brahmagupta, considered division by 0 and suggested that a number divided by
+0 was infinite. This is reasonable because if we divide a number by a very small
+number the answer is very large. For example, 7 divided by a tenth is 70, and by
+a hundredth is 700. By making the denominator number smaller and smaller the
+answer we get is larger and larger. In the ultimate smallness, 0 itself, the answer
+should be infinity. By adopting this form of reasoning, we are put in the position
+of explaining an even more bizarre concept – that is, infinity. Wrestling with
+infinity does not help; infinity (with its standard notation ∞) does not conform to
+the usual rules of arithmetic and is not a number in the usual sense.
+If 7/0 presented a problem, what can be done with the even more bizarre
+0/0? If 0/0 = c, by cross-multiplication, we arrive at the equation 0 = 0 ×c and
+the fact that 0 = 0. This is not particularly illuminating but it is not nonsense
+either. In fact, c can be any number and we do not arrive at an impossibility. We
+reach the conclusion that 0/0 can be anything; in polite mathematical circles it is
+called ‘indeterminate’.
+All in all, when we consider dividing by zero we arrive at the conclusion that it
+is best to exclude the operation from the way we do calculations. Arithmetic can
+be conducted quite happily without it.</p></li>
+</ol>
+</section>
+<section id="what-use-is-zero">
+<h2>What use is zero?<a class="headerlink" href="#what-use-is-zero" title="Link to this heading">#</a></h2>
+<p>We simply could not do without 0. The progress of science has depended on
+it. We talk about zero degrees longitude, zero degrees on the temperature scale,
+and likewise zero energy, and zero gravity. It has entered the non-scientific
+language with such ideas as the zero-hour and zero-tolerance.</p>
+<p><strong>All about nothing
+The sum of zero and a positive number is positive
+The sum of zero and a negative number is negative
+The sum of a positive and a negative is their difference; or, if they are equal, zero
+Zero divided by a negative or positive number is either zero or is expressed as a
+fraction with zero as numerator and the finite quantity as denominator</strong>
+Brahmagupta, AD 628</p>
+<p>Greater use could be made of it though. If you step off the 5th Ave sidewalk
+in New York City and into the Empire State Building, you are in the magnificent
+entrance lobby on Floor Number 1. This makes use of the ability of numbers to
+order, 1 for ‘first’, 2 for ‘second’ and so on, up to 102 for ‘a hundred and second.’
+In Europe they do have a Floor 0 but there is a reluctance to call it that.
+Mathematics could not function without zero. It is in the kernel of
+mathematical concepts which make the number system, algebra, and geometry
+go round. On the number line 0 is the number that separates the positive
+numbers from the negatives and thus occupies a privileged position. In the
+decimal system, zero serves as a place holder which enables us to use both huge
+numbers and microscopic figures.
+Over the course of hundreds of years zero has become accepted and utilized,
+becoming one of the greatest inventions of man. The 19th-century American
+mathematician G.B. Halsted adapted Shakespeare’s Midsummer Night’s Dream to
+write of it as the engine of progress that gives ‘to airy nothing, not merely a local
+habitation and a name, a picture, a symbol, but helpful power, is the
+characteristic of the Hindu race from whence it sprang’.
+When 0 was introduced it must have been thought odd, but mathematicians
+have a habit of fastening onto strange concepts which are proved useful much
+later. The modern day equivalent occurs in set theory where the concept of a set
+is a collection of elements. In this theory Φ designates the set without any
+elements at all, the so-called ‘empty set’. Now that is an odd idea, but like 0 it is
+indispensible.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="the-condensed-idea">
+<h1>the condensed idea<a class="headerlink" href="#the-condensed-idea" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="nothing-is-quite-something">
+<h1>Nothing is quite something<a class="headerlink" href="#nothing-is-quite-something" title="Link to this heading">#</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python demo: Arithmetic Operations with Zero</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- Arithmetic with Zero ---&quot;</span><span class="p">)</span>
+
+<span class="c1"># Addition with zero</span>
+<span class="n">num_add</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">result_add</span> <span class="o">=</span> <span class="n">num_add</span> <span class="o">+</span> <span class="mi">0</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">num_add</span><span class="si">}</span><span class="s2"> + 0 = </span><span class="si">{</span><span class="n">result_add</span><span class="si">}</span><span class="s2"> (Adding zero leaves the number unchanged)&quot;</span><span class="p">)</span>
+
+<span class="c1"># Subtraction with zero</span>
+<span class="n">num_sub</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">result_sub_pos</span> <span class="o">=</span> <span class="n">num_sub</span> <span class="o">-</span> <span class="mi">0</span>
+<span class="n">result_sub_neg</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">-</span> <span class="n">num_sub</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">num_sub</span><span class="si">}</span><span class="s2"> - 0 = </span><span class="si">{</span><span class="n">result_sub_pos</span><span class="si">}</span><span class="s2"> (Subtracting zero leaves the number unchanged)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;0 - </span><span class="si">{</span><span class="n">num_sub</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">result_sub_neg</span><span class="si">}</span><span class="s2"> (Subtracting a number from zero results in its negative)&quot;</span><span class="p">)</span>
+
+<span class="c1"># Multiplication with zero</span>
+<span class="n">num_mul</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">result_mul</span> <span class="o">=</span> <span class="n">num_mul</span> <span class="o">*</span> <span class="mi">0</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">num_mul</span><span class="si">}</span><span class="s2"> * 0 = </span><span class="si">{</span><span class="n">result_mul</span><span class="si">}</span><span class="s2"> (Multiplying by zero always results in zero)&quot;</span><span class="p">)</span>
+
+<span class="c1"># Division by zero (conceptual - Python will raise an error)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Division by Zero ---&quot;</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">result_div</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">/</span> <span class="mi">0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;7 / 0 = </span><span class="si">{</span><span class="n">result_div</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Attempting to divide by zero (7 / 0) results in a ZeroDivisionError. In mathematics, this is undefined.&quot;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">result_div_zero</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">/</span> <span class="mi">0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;0 / 0 = </span><span class="si">{</span><span class="n">result_div_zero</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Attempting to divide zero by zero (0 / 0) also results in a ZeroDivisionError. In mathematics, this is indeterminate.&quot;</span><span class="p">)</span>
+
+<span class="c1"># Zero as a placeholder in number systems</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Zero as a Placeholder ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number 105 uses zero as a placeholder to distinguish it from 15.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;105 = 1 * 100 + 0 * 10 + 5 * 1&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;15  = 1 * 10  + 5 * 1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters_content\01_Zero"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">01 Zero</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-did-zero-become-accepted">How did zero become accepted?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-does-zero-work">How does zero work?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-use-is-zero">What use is zero?</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-condensed-idea">the condensed idea</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#nothing-is-quite-something">Nothing is quite something</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Tony Crilly (Adapted by Gemini)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,688 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>07 Infinity &#8212; 50 Mathematical Ideas You Really Need to Know</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters_content/07_Infinity/content';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="50 Mathematical Ideas You Really Need to Know - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="50 Mathematical Ideas You Really Need to Know - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapters_content/07_Infinity/content.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters_content/07_Infinity/content.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>07 Infinity</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">07 Infinity</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#counting">Counting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cardinality">Cardinality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#are-the-fractions-countably-infinite">Are the fractions countably infinite?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#listing-the-real-numbers">Listing the real numbers</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-condensed-idea">the condensed idea</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-shower-of-infinities">A shower of infinities</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="infinity">
+<h1>07 Infinity<a class="headerlink" href="#infinity" title="Link to this heading">#</a></h1>
+<p><strong>How big is infinity? The short answer is that</strong> ∞ <strong>(the symbol for infinity) is very big. Think
+of a straight line with larger and larger numbers lying along it and the line stretching ‘off
+to infinity’. For every huge number produced, say 10</strong>^1000 <strong>, there is always a bigger one,
+such as 10</strong>^1000 <strong>+ 1.</strong></p>
+<p>This is a traditional idea of infinity, with numbers marching on forever.
+Mathematics uses infinity in any which way, but care has to be taken in treating
+infinity like an ordinary number. It is not.</p>
+<section id="counting">
+<h2>Counting<a class="headerlink" href="#counting" title="Link to this heading">#</a></h2>
+<p>The German mathematician Georg Cantor gave us an entirely different concept
+of infinity. In the process, he single-handedly created a theory which has driven
+much of modern mathematics. The idea on which Cantor’s theory depends has to
+do with a primitive notion of counting, simpler than the one we use in everyday
+affairs.
+Imagine a farmer who didn’t know about counting with numbers. How would
+he know how many sheep he had? Simple – when he lets his sheep out in the
+morning he can tell whether they are all back in the evening by pairing each
+sheep with a stone from a pile at the gate of his field. If there is a sheep missing
+there will be a stone left over. Even without using numbers, the farmer is being
+very mathematical. He is using the idea of a one-to-one correspondence between
+sheep and stones. This primitive idea has some surprising consequences.
+Cantor’s theory involves sets (a set is simply a collection of objects). For
+example <strong>N</strong> = {1, 2, 3, 4, 5, 6, 7, 8,.. .} means the set of (positive) whole
+numbers. Once we have a set, we can talk about subsets, which are smaller sets
+within the larger set. The most obvious subsets connected with our example <strong>N</strong>
+are the subsets <strong>O</strong> = {1, 3, 5, 7,.. .} and <strong>E</strong> = {2, 4, 6, 8,.. .}, which are the
+sets of the odd and even numbers respectively. If we were to ask ‘is there the
+same number of odd numbers as even numbers?’ what would be our answer?
+Though we cannot do this by counting the elements in each set and comparing
+answers, the answer would still surely be ‘yes’. What is this confidence based on?</p>
+<ul class="simple">
+<li><p>probably something like ‘half the whole numbers are odd and half are even’.
+Cantor would agree with the answer, but would give a different reason. He would
+say that every time we have an odd number, we have an even ‘mate’ next to it.
+The idea that both sets <strong>O</strong> and <strong>E</strong> have the same number of elements is based on
+the pairing of each odd number with an even number:</p></li>
+</ul>
+<p>If we were to ask the further question ‘is there the same number of whole
+numbers as even numbers?’ the answer might be ‘no’, the argument being that
+the set <strong>N</strong> has twice as many numbers as the set of even numbers on its own.
+The notion of ‘more’ though, is rather hazy when we are dealing with sets with
+an indefinite number of elements. We could do better with the one-to-one
+correspondence idea. Surprisingly, there is a one-to-one correspondence between
+<strong>N</strong> and the set of even numbers <strong>E</strong> :</p>
+<p>We make the startling conclusion that there is the ‘same number’ of whole
+numbers as even numbers! This flies right in the face of the ‘common notion’
+declared by the ancient Greeks; the beginning of Euclid of Alexandria’s Elements
+text says that ‘the whole is greater than the part’.</p>
+</section>
+<section id="cardinality">
+<h2>Cardinality<a class="headerlink" href="#cardinality" title="Link to this heading">#</a></h2>
+<p>The number of elements in a set is called its ‘cardinality’. In the case of the
+sheep, the cardinality recorded by the farmer’s accountants is 42. The cardinality
+of the set {a, b, c, d, e} is 5 and this is written as card{a, b, c, d, e} = 5. So
+cardinality is a measure of the ‘size’ of a set. For the cardinality of the whole
+numbers <strong>N</strong> , and any set in a one-to-one correspondence with <strong>N</strong> , Cantor used the</p>
+<p>symbol (א or ‘aleph’ is from the Hebrew alphabet; the symbol is read as
+‘aleph nought’). So, in mathematical language, we can write card( <strong>N</strong> ) = card( <strong>O</strong> ) =</p>
+<p>card( <strong>E</strong> ) =.
+Any set which can be put into a one-to-one correspondence with <strong>N</strong> is called a
+‘countably infinite’ set. Being countably infinite means we can write the elements
+of the set down in a list. For example, the list of odd numbers is simply 1, 3, 5,
+7, 9,… and we know which element is first, which is second, and so on.</p>
+</section>
+<section id="are-the-fractions-countably-infinite">
+<h2>Are the fractions countably infinite?<a class="headerlink" href="#are-the-fractions-countably-infinite" title="Link to this heading">#</a></h2>
+<p>The set of fractions <strong>Q</strong> is a larger set than <strong>N</strong> in the sense that <strong>N</strong> can be thought
+of as a subset of <strong>Q</strong>. Can we write all the elements of <strong>Q</strong> down in a list? Can we
+devise a list so that every fraction (including negative ones) is somewhere in it?
+The idea that such a big set could be put in a one-to-one correspondence with <strong>N</strong>
+seems impossible. Nevertheless it can be done.</p>
+<p>The way to begin is to think in two-dimensional terms. To start, we write
+down a row of all the whole numbers, positive and negative alternately. Beneath
+that we write all the fractions with 2 as denominator but we omit those which
+appear in the row above (like 6/ 2 = 3). Below this row we write those fractions</p>
+<p>which have 3 as denominator, again omitting those which have already been
+recorded. We continue in this fashion, of course never ending, but knowing
+exactly where every fraction appears in the diagram. For example, 209/67 is in
+the 67th row, around 200 places to the right of 1/67.</p>
+<p>By displaying all the fractions in this way, potentially at least, we can construct
+a one-dimensional list. If we start on the top row and move to the right at each
+step we will never get to the second row. However, by choosing a devious zig-
+zagging route, we can be successful. Starting at 1, the promised linear list
+begins: 1, −1, ½, ⅓, −½, 2, −2, and follows the arrows. Every fraction, positive
+or negative is somewhere in the linear list and conversely its position gives its
+‘mate’ in the two-dimensional list of fractions. So we can conclude that the set of</p>
+<p>fractions <strong>Q</strong> is countably infinite and write card( <strong>Q</strong> ) =.</p>
+</section>
+<section id="listing-the-real-numbers">
+<h2>Listing the real numbers<a class="headerlink" href="#listing-the-real-numbers" title="Link to this heading">#</a></h2>
+<p>While the set of fractions accounts for many elements on the real number line
+there are also real numbers like , e and a which are not fractions. These are
+the irrational numbers – they ‘fill in the gaps’ to give us the real number line <strong>R</strong>.</p>
+<p>With the gaps filled in, the set <strong>R</strong> is referred to as the ‘continuum’. So, how
+could we make a list of the real numbers? In a move of sheer brilliance, Cantor
+showed that even an attempt to put the real numbers between 0 and 1 into a list
+is doomed to failure. This will undoubtedly come as a shock to people who are
+addicted to list-making, and they may indeed wonder how a set of numbers
+cannot be written down one after another.</p>
+<p>Suppose you did not believe Cantor. You know that each number between 0
+and 1 can be expressed as an extending decimal, for example, ½ =
+0.500000000000000000… and 1/π = 0.31830988618379067153… and you
+would have to say to Cantor, ‘here is my list of all the numbers between 0 and 1’,
+which we’ll call r <strong>1</strong> , r <strong>2</strong> , r <strong>3</strong> , r <strong>4</strong> , r <strong>5</strong> ,. .. If you could not produce one then Cantor</p>
+<p>would be correct.
+Imagine Cantor looks at your list and he marks in <strong>bold</strong> the numbers on the
+diagonal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="mi">1</span> <span class="p">:</span> <span class="mf">0.</span><span class="n">a</span> <span class="mi">1</span> <span class="n">a</span> <span class="mi">2</span> <span class="n">a</span> <span class="mi">3</span> <span class="n">a</span> <span class="mi">4</span> <span class="n">a</span> <span class="mf">5.</span><span class="o">..</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="mi">2</span> <span class="p">:</span> <span class="mf">0.</span><span class="n">b</span> <span class="mi">1</span> <span class="n">b</span> <span class="mi">2</span> <span class="n">b</span> <span class="mi">3</span> <span class="n">b</span> <span class="mi">4</span> <span class="n">b</span> <span class="mf">5.</span><span class="o">..</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="mi">3</span> <span class="p">:</span> <span class="mf">0.</span><span class="n">c</span> <span class="mi">1</span> <span class="n">c</span> <span class="mi">2</span> <span class="n">c</span> <span class="mi">3</span> <span class="n">c</span> <span class="mi">4</span> <span class="n">c</span> <span class="mf">5.</span><span class="o">..</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>r 4 : 0.d 1 d 2 d 3 d 4 d 5...
+Cantor would have said, ‘OK, but where is the number x = x 1 x 2 x 3 x 4 x 5...
+</pre></div>
+</div>
+<p>where x <strong>1</strong> differs from a <strong>1</strong> , x <strong>2</strong> differs from b <strong>2</strong> , x <strong>3</strong> differs from c <strong>3</strong> working our way</p>
+<p>down the diagonal?’ His x differs from every number in your list in one decimal
+place and so it cannot be there. Cantor is right.
+In fact, no list is possible for the set of real numbers <strong>R</strong> , and so it is a ‘larger’
+infinite set, one with a ‘higher order of infinity’, than the infinity of the set of
+fractions <strong>Q</strong>. Big just got bigger.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="the-condensed-idea">
+<h1>the condensed idea<a class="headerlink" href="#the-condensed-idea" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="a-shower-of-infinities">
+<h1>A shower of infinities<a class="headerlink" href="#a-shower-of-infinities" title="Link to this heading">#</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python demo: Conceptual One-to-One Correspondence for Infinite Sets</span>
+
+<span class="c1"># This example conceptually demonstrates Cantor&#39;s idea of one-to-one correspondence</span>
+<span class="c1"># to compare the &quot;size&quot; of infinite sets.</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">map_natural_to_even</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="c1"># Maps a natural number n to an even number</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">n</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">map_natural_to_odd</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="c1"># Maps a natural number n to an odd number</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- One-to-One Correspondence: Natural Numbers to Even Numbers ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Natural Numbers (N): 1, 2, 3, 4, 5, ...&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Even Numbers (E):    2, 4, 6, 8, 10, ...&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mapping N to E:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;f(</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">) = </span><span class="si">{</span><span class="n">map_natural_to_even</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This shows a one-to-one correspondence, implying N and E have the same cardinality.&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- One-to-One Correspondence: Natural Numbers to Odd Numbers ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Natural Numbers (N): 1, 2, 3, 4, 5, ...&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Odd Numbers (O):     1, 3, 5, 7, 9, ...&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mapping N to O:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;f(</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">) = </span><span class="si">{</span><span class="n">map_natural_to_odd</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This also shows a one-to-one correspondence, implying N and O have the same cardinality.&quot;</span><span class="p">)</span>
+
+<span class="c1"># Conceptual demonstration of why real numbers are &quot;more&quot; infinite (Cantor&#39;s Diagonal Argument)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Cantor&#39;s Diagonal Argument (Conceptual) ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Imagine a list of all real numbers between 0 and 1:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. 0.12345...&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. 0.56789...&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3. 0.98765...&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;...&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;We can construct a new number by taking the first digit of the first number, changing it, &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;the second digit of the second number, changing it, and so on.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This new number will differ from every number in the list by at least one digit.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Therefore, no such complete list can exist, meaning the real numbers are &#39;uncountably infinite&#39;.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters_content\07_Infinity"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">07 Infinity</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#counting">Counting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cardinality">Cardinality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#are-the-fractions-countably-infinite">Are the fractions countably infinite?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#listing-the-real-numbers">Listing the real numbers</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-condensed-idea">the condensed idea</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-shower-of-infinities">A shower of infinities</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Tony Crilly (Adapted by Gemini)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,756 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>13 Pascal’s triangle &#8212; 50 Mathematical Ideas You Really Need to Know</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters_content/13_Pascals_triangle';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="14 Algebra" href="14_Algebra.html" />
+    <link rel="prev" title="12 Golden rectangles" href="12_Golden_rectangles.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="50 Mathematical Ideas You Really Need to Know - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="50 Mathematical Ideas You Really Need to Know - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introducción a 50 Ideas Matemáticas
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_Zero.html">01 Zero</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="02_Number_systems.html">02 Number systems</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="03_Fractions.html">03 Fractions</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="04_Squares_and_square_roots.html">04 Squares and square roots</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="05_Pi.html">05 π</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="06_e.html">06 e</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="07_Infinity.html">07 Infinity</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="08_Imaginary_numbers.html">08 Imaginary numbers</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="09_Primes.html">09 Primes</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="10_Perfect_numbers.html">10 Perfect numbers</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="11_Fibonacci_numbers.html">11 Fibonacci numbers</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="12_Golden_rectangles.html">12 Golden rectangles</a></li>
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">13 Pascal’s triangle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_Algebra.html">14 Algebra</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="15_Euclids_algorithm.html">15 Euclid’s algorithm</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="16_Logic.html">16 Logic</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="17_Proof.html">17 Proof</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="18_Sets.html">18 Sets</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="19_Calculus.html">19 Calculus</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="20_Constructions.html">20 Constructions</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="21_Triangles.html">21 Triangles</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="22_Curves.html">22 Curves</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="23_Topology.html">23 Topology</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="24_Dimension.html">24 Dimension</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="25_Fractals.html">25 Fractals</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="26_Chaos.html">26 Chaos</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="27_The_parallel_postulate.html">27 The parallel postulate</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="28_Discrete_geometry.html">28 Discrete geometry</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="29_Graphs.html">29 Graphs</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="30_The_four-colour_problem.html">30 The four-colour problem</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="31_Probability.html">31 Probability</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="32_Bayess_theory.html">32 Bayes’s theory</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="33_The_birthday_problem.html">33 The birthday problem</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="34_Distributions.html">34 Distributions</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="35_The_normal_curve.html">35 The normal curve</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="36_Connecting_data.html">36 Connecting data</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="37_Genetics.html">37 Genetics</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="38_Groups.html">38 Groups</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="39_Matrices.html">39 Matrices</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="40_Codes.html">40 Codes</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="41_Advanced_counting.html">41 Advanced counting</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="42_Magic_squares.html">42 Magic squares</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="43_Latin_squares.html">43 Latin squares</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="44_Money_mathematics.html">44 Money mathematics</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="45_The_diet_problem.html">45 The diet problem</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="46_The_travelling_salesperson.html">46 The travelling salesperson</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="47_Game_theory.html">47 Game theory</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="48_Relativity.html">48 Relativity</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="49_Fermats_last_theorem.html">49 Fermat’s last theorem</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="50_The_Riemann_hypothesis.html">50 The Riemann hypothesis</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="51_Glossary.html">51 Glossary</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapters_content/13_Pascals_triangle.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapters_content/13_Pascals_triangle.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>13 Pascal’s triangle</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#links-with-algebra">Links with algebra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties">Properties</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="pascals-triangle">
+<h1>13 Pascal’s triangle<a class="headerlink" href="#pascals-triangle" title="Link to this heading">#</a></h1>
+<p><strong>The number 1 is important but what about 11? It is interesting too and so is 11 × 11 =
+121, 11 × 11 × 11 = 1331 and 11 × 11 × 11 × 11 = 14,641. Setting these out we get</strong></p>
+<p><strong>These are the first lines of Pascal’s triangle. But where do we find it?</strong></p>
+<p>Throwing in 11° = 1 for good measure, the first thing to do is forget the
+commas, and then introduce spaces between the numbers. So 14,641 becomes
+1 4 6 4 1.</p>
+<p>Pascal’s triangle is famous in mathematics for its symmetry and hidden
+relationships. In 1653 Blaise Pascal thought so and remarked that he could not
+possibly cover them all in one paper. The many connections of Pascal’s triangle
+with other branches of mathematics have made it into a venerable mathematical
+object, but its origins can be traced back much further than this. In fact Pascal
+didn’t invent the triangle named after him – it was known to Chinese scholars of
+the 13th century.</p>
+<p>The Pascal pattern is generated from the top. Start with a 1 and place two 1s
+on either side of it in the next row down. To construct further rows we continue
+to place 1s on the ends of each row while the internal numbers are obtained by
+the sum of the two numbers immediately above. To obtain 6 in the fifth row for
+example, we add 3 + 3 from the row above. The English mathematician G.H.
+Hardy said ‘a mathematician, like a painter or a poet, is a maker of patterns’ and
+Pascal’s triangle has patterns in spades.</p>
+<section id="links-with-algebra">
+<h2>Links with algebra<a class="headerlink" href="#links-with-algebra" title="Link to this heading">#</a></h2>
+<p>Pascal’s triangle is founded on real mathematics. If we work out (1 + x) × (1</p>
+<ul class="simple">
+<li><p>x) × (1 + x) = (1 + x)^3 , for example, we get 1 + 3x + 3x^2 + x^3. Look closely
+and you’ll see the numbers in front of the symbols in this expression match the
+numbers in the corresponding row of Pascal’s triangle. The scheme followed is:</p></li>
+</ul>
+<p>If we add up the numbers in any row of Pascal’s triangle we always obtain a
+power of 2. For example in the fifth row down 1 + 4 + 6 + 4 + 1 = 16 = 2^4.
+This can be obtained from the left-hand column above if we use x = 1.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Almost diagonals in Pascal’s triangle
+</pre></div>
+</div>
+</section>
+<section id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Link to this heading">#</a></h2>
+<p>The first and most obvious property of Pascal’s triangle is its symmetry. If we
+draw a vertical line down through the middle, the triangle has ‘mirror symmetry’</p>
+<ul class="simple">
+<li><p>it is the same to the left of the vertical line as to the right of it. This allows us
+to talk about plain ‘diagonals’, because a northeast diagonal will be the same as a
+northwest diagonal. Under the diagonal made up of 1s we have the diagonal
+made up of the counting numbers 1, 2, 3, 4, 5, 6,… Under that there are the
+triangular numbers, 1, 3, 6, 10, 15, 21,… (the numbers which can be made up
+of dots in the form of triangles). In the diagonal under that we have the
+tetrahedral numbers, 1, 4, 10, 20, 35, 56,… These numbers correspond to
+tetrahedra (‘three-dimensional triangles’, or, if you like, the number of cannon
+balls which can be placed on triangular bases of increasing sizes). And what
+about the ‘almost diagonals’?
+If we add up the numbers in lines across the triangle (which are not rows or
+true diagonals), we get the sequence 1, 2, 5, 13, 34,… Each number is three
+times the previous one with the one before that subtracted. For example 34 = 3
+× 13 – 5. Based on this, the next number in the sequence will be 3 × 34 – 13 =</p></li>
+</ul>
+<ol class="arabic simple" start="89">
+<li><p>We have missed out the alternate ‘almost diagonals’, starting with 1, 1 + 2 =
+3, but these will give us the sequence <strong>1</strong> , <strong>3</strong> , <strong>8</strong> , <strong>21</strong> , <strong>55</strong> ,… and these are
+generated by the same ‘3 times minus 1’ rule. We can therefore generate the next
+number in the sequence, as 3 × 55 – 21 = <strong>144</strong>. But there’s more. If we
+interleave these two sequences of ‘almost diagonals’ we get the Fibonacci</p></li>
+</ol>
+<p>numbers:
+1, <strong>1</strong> , 2, <strong>3</strong> , 5, <strong>8</strong> , 13, <strong>21</strong> , 34, <strong>55</strong> , 89, <strong>144</strong> ,…</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python demo: Generate Pascal&#39;s Triangle</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_pascals_triangle</span><span class="p">(</span><span class="n">num_rows</span><span class="p">):</span>
+    <span class="n">triangle</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_rows</span><span class="p">):</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+            <span class="n">row</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">triangle</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">triangle</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+        <span class="n">triangle</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">triangle</span>
+
+<span class="c1"># Example usage:</span>
+<span class="n">rows</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">pascal_triangle</span> <span class="o">=</span> <span class="n">generate_pascals_triangle</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">pascal_triangle</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+<span class="c1"># Demonstrate sum of rows (powers of 2)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Sum of elements in each row:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pascal_triangle</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Row </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">: Sum = </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">row</span><span class="p">)</span><span class="si">}</span><span class="s2"> (2^</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters_content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="12_Golden_rectangles.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">12 Golden rectangles</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="14_Algebra.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">14 Algebra</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#links-with-algebra">Links with algebra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties">Properties</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Tony Crilly (Adapted by Gemini)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

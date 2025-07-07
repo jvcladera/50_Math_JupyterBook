@@ -1,0 +1,704 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>02 Number systems &#8212; 50 Mathematical Ideas You Really Need to Know</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters_content/02_Number_systems/content';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="50 Mathematical Ideas You Really Need to Know - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="50 Mathematical Ideas You Really Need to Know - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapters_content/02_Number_systems/content.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters_content/02_Number_systems/content.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>02 Number systems</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">02 Number systems</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-roman-system">The Roman system</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decimal-whole-numbers">Decimal whole numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-point-of-decimal">The point of decimal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zeros-and-ones">Zeros and ones</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-condensed-idea">the condensed idea</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-numbers-down">Writing numbers down</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="number-systems">
+<h1>02 Number systems<a class="headerlink" href="#number-systems" title="Link to this heading">#</a></h1>
+<p>**A number system is a method for handling the concept of</p>
+<p>‘how many’. Different cultures
+at differing periods of time have adopted various methods, ranging from the basic ‘one,
+two, three, many’ to the highly sophisticated decimal positional notation we use today.**</p>
+<p>The Sumerians and Babylonians, who inhabited present-day Syria, Jordan and
+Iraq around 4000 years ago, used a place-value system for their practical
+everyday use. We call it a place-value system because you can tell the ‘number’
+by the positioning of a symbol. They also used 60 as the basic unit – what we
+call today a ‘base 60’ system. Vestiges of base 60 are still with us: 60 seconds in
+a minute, 60 minutes in an hour. When measuring angles we still reckon the full
+angle to be 360 degrees, despite the attempt of the metric system to make it 400
+grads (so that each right angle is equal to 100 grads).
+While our ancient ancestors primarily wanted numbers for practical ends, there
+is some evidence that these early cultures were intrigued by mathematics itself,
+and they took time off from the practicalities of life to explore them. These
+explorations included what we might call ‘algebra’ and also the properties of
+geometrical figures.
+The Egyptian system from the 13th century <strong>BC</strong> used base ten with a system of
+hieroglyphic signs. Notably the Egyptians developed a system for dealing with
+fractions, but today’s place-value decimal notation came from the Babylonians,
+later refined by the Hindus. Where it has the advantage is the way it can be used
+to express both very small and very large numbers. Using only the Hindu-Arabic
+numerals 1, 2, 3, 4, 5, 6, 7, 8 and 9, computations can be made with relative
+ease. To see this let’s look at the Roman system. It suited their needs but only
+specialists in the system were capable of performing calculations with it.</p>
+<section id="the-roman-system">
+<h2>The Roman system<a class="headerlink" href="#the-roman-system" title="Link to this heading">#</a></h2>
+<p>The basic symbols used by the Romans were the ‘tens’ (I, X, C and M), and
+the ‘halves’ of these (V, L and D). The symbols are combined to form others. It
+has been suggested that the use of I, II, III and IIII derives from the appearance
+of our fingers, V from the shape of the hand, and by inverting it and joining the</p>
+<p>two together to form the X we get two hands or ten fingers. C comes from
+centum and M from mille, the Latin for one hundred and one thousand
+respectively. The Romans also used S for ‘a half’ and a system of fractions based
+on 12.</p>
+<p><strong>Roman number system
+Roman Empiremedieval appendages</strong>
+S a half
+I one
+V five five thousand
+X ten ten thousand
+L fifty fifty thousand
+C hundred hundred thousand
+D five hundred five hundred thousand
+M thousand one million</p>
+<p>The Roman system made some use of a ‘before and after’ method of
+producing the symbols needed but it would seem this was not uniformly
+adopted. The ancient Romans preferred to write IIII with IV only being
+introduced later. The combination IX seems to have been used, but a Roman
+would mean 8½ if SIX were written! Here are the basic numbers of the Roman
+system, with some additions from medieval times:
+It’s not easy handling Roman numerals. For example, the meaning of
+MMMCDXLIIII only becomes transparent when brackets are mentally introduced
+so that (MMM)(CD)(XL)(IIII) is then read as 3000 + 400 + 40 + 4 = 3444. But
+try adding MMMCDXLIIII + CCCXCIIII. A Roman skilled in the art would have
+short cuts and tricks, but for us it’s difficult to obtain the right answer without
+first calculating it in the decimal system and translating the result back into
+Roman notation:</p>
+<p>The multiplication of two numbers is much more difficult and might be
+impossible within the basic system, even to Romans! To multiply 3444 × 394 we
+need the medieval appendages.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="n">Louis</span> <span class="n">XIIII</span> <span class="n">clock</span>
+</pre></div>
+</div>
+<p>The Romans had no specific symbol for zero. If you asked a vegetarian citizen
+of Rome to record how many bottles of wine he’d consumed that day, he might
+write III but if you asked him how many chickens he’d eaten, he couldn’t write 0.
+Vestiges of the Roman system survive in the pagination of some books (though
+not this one) and on the foundation stones of buildings. Some constructions were
+never used by the Romans, like MCM for 1900, but were introduced for stylistic
+reasons in modern times. The Romans would have written MDCCCC. The
+fourteenth King Louis of France, now universally known as Louis XIV, actually
+preferred to be known as Louis XIIII and made it a rule that his clocks were to
+show 4 o’clock as IIII o’clock.</p>
+</section>
+<section id="decimal-whole-numbers">
+<h2>Decimal whole numbers<a class="headerlink" href="#decimal-whole-numbers" title="Link to this heading">#</a></h2>
+<p>We naturally identify ‘numbers’ with decimal numbers. The decimal system is
+based on ten using the numerals 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9. Actually it is
+based on ‘tens’ and ‘units’ but units can be absorbed into ‘base 10’. When we
+write down the number <strong>394</strong> , we can explain its decimal meaning by saying it is
+composed of <strong>3</strong> hundreds, <strong>9</strong> tens and <strong>4</strong> units, and we could write
+<strong>394</strong> = <strong>3</strong> × 100 + <strong>9</strong> × 10 + <strong>4</strong> × 1
+This can be written using ‘powers’ of 10 (also known as ‘exponentials’ or
+‘indices’),
+<strong>394</strong> = <strong>3</strong> × 10^2 + <strong>9</strong> × 10^1 + <strong>4</strong> × 10^0
+where 10^2 = 10 × 10, 10^1 = 10 and we agree separately that 10^0 = 1. In this
+expression we see more clearly the decimal basis for our everyday number
+system, a system which makes addition and multiplication fairly transparent.</p>
+</section>
+<section id="the-point-of-decimal">
+<h2>The point of decimal<a class="headerlink" href="#the-point-of-decimal" title="Link to this heading">#</a></h2>
+<p>So far we have looked at representing whole numbers. Can the decimal
+system cope with parts of a number, like 572/1000?
+This means</p>
+<p>We can treat the ‘reciprocals’ of 10, 100, 1000 as negative powers of 10, so
+that</p>
+<p>and this can be written <strong>.572</strong> where the decimal point indicates the beginning
+of the negative powers of 10. If we add this to the decimal expression for 394 we
+get the decimal expansion for the number 394572/1000, which is simply</p>
+<p><strong>394.</strong>.
+For very big numbers the decimal notation can be very long, so we revert in
+this case to the ‘scientific notation’. For example, 1,356,936,892 can be written as
+1.356936892 × 10^9 which often appears as ‘1.356936892 × 10E9’ on calculators
+or computers. Here, the power 9 is one less than the number of digits in the</p>
+<p>number and the letter E stands for ‘exponential’. Sometimes we might want to
+use bigger numbers still, for instance if we were talking about the number of
+hydrogen atoms in the known universe. This has been estimated as about
+1.7×10^77. Equally 1.7×10−77, with a negative power, is a very small number and
+this too is easily handled using scientific notation. We couldn’t begin to think of
+these numbers with the Roman symbols.</p>
+</section>
+<section id="zeros-and-ones">
+<h2>Zeros and ones<a class="headerlink" href="#zeros-and-ones" title="Link to this heading">#</a></h2>
+<p>While base 10 is common currency in everyday life, some applications require
+other bases. The binary system which uses base 2 lies behind the power of the
+modern computer. The beauty of binary is that any number can be expressed
+using only the symbols 0 and 1. The tradeoff for this economy is that the
+number expressions can be very long.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Powers</span> <span class="n">of</span> <span class="mi">2</span> <span class="n">Decimal</span>
+<span class="mi">20</span> <span class="mi">1</span>
+<span class="mi">21</span> <span class="mi">2</span>
+<span class="mi">22</span> <span class="mi">4</span>
+<span class="mi">23</span> <span class="mi">8</span>
+<span class="mi">24</span> <span class="mi">16</span>
+<span class="mi">25</span> <span class="mi">32</span>
+<span class="mi">26</span> <span class="mi">64</span>
+<span class="mi">27</span> <span class="mi">128</span>
+<span class="mi">28</span> <span class="mi">256</span>
+<span class="mi">29</span> <span class="mi">512</span>
+<span class="mi">210</span> <span class="mi">1024</span>
+</pre></div>
+</div>
+<p>How can we express <strong>394</strong> in binary notation? This time we are dealing with
+powers of 2 and after some working out we can give the full expression as,
+<strong>394</strong> = <strong>1</strong> ×256+ <strong>1</strong> ×128+ <strong>0</strong> ×64+ <strong>0</strong> ×32+ <strong>0</strong> ×16+ <strong>1</strong> ×8+ <strong>0</strong> ×4+ <strong>1</strong> ×2+ <strong>0</strong> ×
+so that reading off the zeros and ones, <strong>394</strong> in binary is <strong>110001010</strong>.
+As binary expressions can be very long, other bases frequently arise in
+computing. These are the octal system (base 8) and the hexadecimal system</p>
+<p>(base 16). In the octal system we only need the symbols 0, 1, 2, 3, 4, 5, 6, 7,
+whereas hexadecimal uses 16 symbols. In this base 16 system, we customarily
+use 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F. As 10 corresponds to the letter A,
+the number <strong>394</strong> is represented in hexadecimal as 18A. It’s as easy as ABC,
+which bear in mind, is really 2748 in decimal!</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="the-condensed-idea">
+<h1>the condensed idea<a class="headerlink" href="#the-condensed-idea" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="writing-numbers-down">
+<h1>Writing numbers down<a class="headerlink" href="#writing-numbers-down" title="Link to this heading">#</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python demo: Number System Conversions</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">decimal_to_binary</span><span class="p">(</span><span class="n">decimal_num</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">bin</span><span class="p">(</span><span class="n">decimal_num</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span> <span class="c1"># [2:] to remove the &#39;0b&#39; prefix</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">binary_to_decimal</span><span class="p">(</span><span class="n">binary_num_str</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">binary_num_str</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">decimal_to_hexadecimal</span><span class="p">(</span><span class="n">decimal_num</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">hex</span><span class="p">(</span><span class="n">decimal_num</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="c1"># [2:] to remove &#39;0x&#39; prefix, .upper() for uppercase letters</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">hexadecimal_to_decimal</span><span class="p">(</span><span class="n">hex_num_str</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">hex_num_str</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+
+<span class="c1"># Example usage:</span>
+<span class="n">dec_num</span> <span class="o">=</span> <span class="mi">394</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Decimal </span><span class="si">{</span><span class="n">dec_num</span><span class="si">}</span><span class="s2"> in Binary: </span><span class="si">{</span><span class="n">decimal_to_binary</span><span class="p">(</span><span class="n">dec_num</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Decimal </span><span class="si">{</span><span class="n">dec_num</span><span class="si">}</span><span class="s2"> in Hexadecimal: </span><span class="si">{</span><span class="n">decimal_to_hexadecimal</span><span class="p">(</span><span class="n">dec_num</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">bin_num_str</span> <span class="o">=</span> <span class="s2">&quot;110001010&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Binary </span><span class="si">{</span><span class="n">bin_num_str</span><span class="si">}</span><span class="s2"> in Decimal: </span><span class="si">{</span><span class="n">binary_to_decimal</span><span class="p">(</span><span class="n">bin_num_str</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">hex_num_str</span> <span class="o">=</span> <span class="s2">&quot;18A&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hexadecimal </span><span class="si">{</span><span class="n">hex_num_str</span><span class="si">}</span><span class="s2"> in Decimal: </span><span class="si">{</span><span class="n">hexadecimal_to_decimal</span><span class="p">(</span><span class="n">hex_num_str</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Roman Numeral Conversion (conceptual - more complex to implement fully)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">roman_to_decimal</span><span class="p">(</span><span class="n">roman_numeral</span><span class="p">):</span>
+    <span class="n">roman_map</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;I&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">}</span>
+    <span class="n">decimal_val</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">prev_val</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">roman_numeral</span><span class="p">):</span>
+        <span class="n">current_val</span> <span class="o">=</span> <span class="n">roman_map</span><span class="p">[</span><span class="n">char</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">current_val</span> <span class="o">&lt;</span> <span class="n">prev_val</span><span class="p">:</span>
+            <span class="n">decimal_val</span> <span class="o">-=</span> <span class="n">current_val</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">decimal_val</span> <span class="o">+=</span> <span class="n">current_val</span>
+        <span class="n">prev_val</span> <span class="o">=</span> <span class="n">current_val</span>
+    <span class="k">return</span> <span class="n">decimal_val</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Roman numeral MMMCDXLIIII in Decimal: </span><span class="si">{</span><span class="n">roman_to_decimal</span><span class="p">(</span><span class="s1">&#39;MMMCDXLIIII&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters_content\02_Number_systems"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">02 Number systems</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-roman-system">The Roman system</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decimal-whole-numbers">Decimal whole numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-point-of-decimal">The point of decimal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zeros-and-ones">Zeros and ones</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-condensed-idea">the condensed idea</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-numbers-down">Writing numbers down</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Tony Crilly (Adapted by Gemini)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

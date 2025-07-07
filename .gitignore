@@ -1,0 +1,8 @@
+# Jupyter Book build output
+_build/
+.ipynb_checkpoints/
+.DS_Store
+*.pyc
+__pycache__/
+.env
+venv/
