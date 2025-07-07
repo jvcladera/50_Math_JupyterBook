@@ -102,3 +102,32 @@ print("The number 105 uses zero as a placeholder to distinguish it from 15.")
 print("105 = 1 * 100 + 0 * 10 + 5 * 1")
 print("15  = 1 * 10  + 5 * 1")
 ```
+
+## Demostración Interactiva: Multiplicación por Cero
+
+Introduce un número en el campo de texto y haz clic en "Calcular" para ver el resultado de multiplicarlo por cero.
+
+```python
+from ipywidgets import Text, Button, Output, VBox
+from IPython.display import display
+
+# Crear widgets
+text_input = Text(description="Número:")
+calculate_button = Button(description="Calcular")
+output_area = Output()
+
+def on_button_click(b):
+    with output_area:
+        output_area.clear_output() # Limpiar salida anterior
+        try:
+            num = float(text_input.value)
+            result = num * 0
+            print(f"{num} * 0 = {result}")
+        except ValueError:
+            print("Por favor, introduce un número válido.")
+
+calculate_button.on_click(on_button_click)
+
+# Mostrar widgets
+display(VBox([text_input, calculate_button, output_area]))
+```
